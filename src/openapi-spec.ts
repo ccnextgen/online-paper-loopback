@@ -1,5 +1,6 @@
 import {ApplicationConfig} from '@loopback/core';
 import {OnlinePaperLoopbackApplication} from './application';
+require('dotenv').config()
 
 /**
  * Export the OpenAPI spec from the application
