@@ -120,6 +120,16 @@ export class UserAuthenticationController {
     }
 
   }
+
+
+  @get('api/user/isAuthenticated')
+  async isAuthenticated(
+    @param.query.string('token') token: string
+  ) {
+    let isAuthenticated = await this.userService.validateToken(token);
+    console.log(isAuthenticated)
+    return isAuthenticated.success
+  }
 }
 
 
